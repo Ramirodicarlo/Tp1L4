@@ -9,6 +9,8 @@ namespace TODOLIST.Data.Entities
         public string? Title { get; set; }
         public string? Description { get; set; }
         public bool State { get; set; }
+        [ForeignKey("UserID")]
+        public int UserID { get; set; }
     }
 
     }
