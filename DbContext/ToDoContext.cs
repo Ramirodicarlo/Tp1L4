@@ -47,7 +47,9 @@ namespace TODOLIST.DBContext
                    Description = "Es la descripcion",
                    State = true
                });
-
+            //relación uno (user) a muchos (todo)
+            modelBuilder.Entity<USer>()
+                .HasMany(u => u.ToDos);
         }
     }
 }
